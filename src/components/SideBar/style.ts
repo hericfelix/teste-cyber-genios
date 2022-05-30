@@ -36,7 +36,7 @@ export const Container = styled.nav<ContainerProps>`
       text-decoration: none;
       line-height: 150%;
       :first-child {
-        border-bottom: ${({ theme }) => `1px solid ${theme.colors.primary}`};
+        border-bottom: ${({ theme }) => `2px solid ${theme.colors.primary}`};
       }
       color: ${({ theme }) => theme.colors.primary};
       font-weight: ${({ theme }) => theme.typography.mobile.button.weight};

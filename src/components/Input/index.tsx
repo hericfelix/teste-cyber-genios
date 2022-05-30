@@ -1,9 +1,17 @@
-import React from 'react';
+import React, { InputHTMLAttributes } from 'react';
+import { Container, InnerInput } from './style';
 
-type Props = {};
+interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
+  label: string;
+}
 
-const Input = (props: Props) => {
-  return <div>Input</div>;
+const Input = ({ name, label, ...rest }: InputProps) => {
+  return (
+    <Container>
+      <label htmlFor={name}>{label}</label>
+      <InnerInput id={name} {...rest} />
+    </Container>
+  );
 };
 
 export default Input;

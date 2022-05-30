@@ -11,7 +11,7 @@ const SideBar = ({ isShown }: SideBarProps) => {
   console.log(isShown);
   return (
     <Container isShown={isShown}>
-      <Icon icon="carbon:logo-delicious" />
+      <Icon height={48.75} width={48.75} icon="carbon:logo-delicious" />
       <ul>
         <Link to="/">Home</Link>
         <Link to="/">Fale Conosco</Link>
