@@ -1,17 +1,14 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  display: 'flex';
-  flex-direction: column;
-  align-items: flex-start;
   width: 20rem;
-  box-sizing: border-box;
   max-width: 95%;
   label {
     font-size: ${({ theme }) => theme.typography.desktop.p.mdSize};
     color: ${({ theme }) => theme.colors.secondary};
     line-height: 150%;
     font-weight: ${({ theme }) => theme.typography.desktop.p.smWeight};
+    margin-bottom: 0.5rem;
   }
 `;
 

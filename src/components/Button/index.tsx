@@ -9,7 +9,7 @@ import { Container } from './style';
 
 interface ButtonProps {
   children: ReactNode;
-  style: DefaultOrBlack;
+  color: DefaultOrBlack;
   variant: RoundedOrSquare;
   size: SmallorMedium;
   border: WhiteorBlackorNone;
@@ -18,7 +18,7 @@ interface ButtonProps {
 
 const Button = ({
   children,
-  style = 'default',
+  color = 'default',
   variant = 'rounded',
   border = 'black',
   padding = 'medium',
@@ -29,7 +29,7 @@ const Button = ({
       border={border}
       padding={padding}
       size={size}
-      style={style}
+      color={color}
       variant={variant}
     >
       {children}

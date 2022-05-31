@@ -8,15 +8,15 @@ import {
 
 interface ContainerProps {
   variant: RoundedOrSquare;
-  style: DefaultOrBlack;
+  color: DefaultOrBlack;
   size: SmallorMedium;
   border: WhiteorBlackorNone;
   padding: SmallorMedium;
 }
 
 export const Container = styled.button<ContainerProps>`
-  background-color: ${({ theme, style }) =>
-    style === 'default' ? 'transparent' : theme.colors.primary};
+  background-color: ${({ theme, color }) =>
+    color === 'default' ? 'transparent' : theme.colors.primary};
   font-size: ${({ theme, size }) =>
     size === 'small'
       ? theme.typography.mobile.button.smSize
