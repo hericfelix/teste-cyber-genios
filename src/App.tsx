@@ -5,17 +5,12 @@ import CarCard from './components/CarCard';
 import Carousel from './components/Carousel';
 import Header from './components/Header';
 import Input from './components/Input';
+import Table from './components/Table';
 import { useCars } from './providers/cars';
 
 function App() {
   const { cars } = useCars();
-  return (
-    <Carousel>
-      {cars.map((el) => (
-        <CarCard car={el} />
-      ))}
-    </Carousel>
-  );
+  return <Table />;
 }
 
 export default App;

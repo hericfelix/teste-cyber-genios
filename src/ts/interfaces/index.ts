@@ -63,3 +63,9 @@ export interface CarsContextData {
   selectedCarId: number;
   setSelectedCarId: React.Dispatch<React.SetStateAction<number>>;
 }
+
+export interface PaginateContextData {
+  paginatedCars: ICar[];
+  handleLoadMoreCars: () => Promise<void>;
+  canLoadMoreCars: boolean;
+}
