@@ -10,7 +10,7 @@ import { useCars } from './providers/cars';
 
 function App() {
   const { cars } = useCars();
-  return <Table />;
+  return <Header />;
 }
 
 export default App;

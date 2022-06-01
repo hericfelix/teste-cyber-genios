@@ -12,7 +12,7 @@ export const Container = styled.nav<ContainerProps>`
   transition: left 0.65s ease-in-out;
   width: 16.875rem;
   border-radius: 0px 1.5rem 1.5rem 0px;
-  background-color: ${({ theme }) => theme.colors.white};
+  background-color: #ffffff;
   padding: 1.5rem 2.5rem;
   display: flex;
   flex-direction: column;
@@ -31,13 +31,15 @@ export const Container = styled.nav<ContainerProps>`
     list-style: none;
     align-items: flex-start;
     padding: 0;
+    > :nth-child(1) {
+      border-bottom: ${({ theme }) => `2px solid ${theme.colors.primary}`};
+    }
+
     a {
       font-size: ${({ theme }) => theme.typography.mobile.button.mdSize};
       text-decoration: none;
       line-height: 150%;
-      :first-child {
-        border-bottom: ${({ theme }) => `2px solid ${theme.colors.primary}`};
-      }
+
       color: ${({ theme }) => theme.colors.primary};
       font-weight: ${({ theme }) => theme.typography.mobile.button.weight};
     }

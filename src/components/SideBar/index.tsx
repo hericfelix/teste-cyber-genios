@@ -13,10 +13,18 @@ const SideBar = ({ isShown }: SideBarProps) => {
     <Container isShown={isShown}>
       <Icon height={48.75} width={48.75} icon="carbon:logo-delicious" />
       <ul>
-        <Link to="/">Home</Link>
-        <Link to="/">Fale Conosco</Link>
-        <Link to="/">Sobre</Link>
-        <Link to="/">Tabela</Link>
+        <li>
+          <Link to="/">Home</Link>
+        </li>
+        <li>
+          <Link to="/">Fale Conosco</Link>
+        </li>
+        <li>
+          <Link to="/">Sobre</Link>
+        </li>
+        <li>
+          <Link to="/">Tabela</Link>
+        </li>
       </ul>
     </Container>
   );

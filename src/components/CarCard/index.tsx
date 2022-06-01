@@ -11,7 +11,7 @@ interface CarCardProps {
 const CarCard = ({ car }: CarCardProps) => {
   return (
     <Container>
-      <img src={car.img} />
+      <img src={car.img} alt={car.name} />
       <h2>{car.name}</h2>
       <CarInfo>
         <div>
