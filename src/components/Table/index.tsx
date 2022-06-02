@@ -11,17 +11,18 @@ import {
   Loader,
 } from './style';
 import { useTable, useFlexLayout, Column, CellProps } from 'react-table';
-import ReactLoading from 'react-loading';
 
 import InfiniteScroll from 'react-infinite-scroll-component';
 import { usePaginate } from '../../providers/paginate';
 import { ICar } from '../../ts/interfaces';
 import { Icon } from '@iconify/react';
 import { useCars } from '../../providers/cars';
+import { useModals } from '../../providers/modals';
 
 export const Table = () => {
   const { setSelectedCarId } = useCars();
   const { paginatedCars, canLoadMoreCars, handleLoadMoreCars } = usePaginate();
+  const { setIsEditModalOpen, setIsDeleteModalOpen } = useModals();
 
   const columns = useMemo<Column<ICar>[]>(
     () => [
@@ -56,11 +57,17 @@ export const Table = () => {
           <IconContainer>
             <Icon
               icon="akar-icons:trash-can"
-              onClick={() => setSelectedCarId(c.row.original.id)}
+              onClick={() => {
+                setSelectedCarId(c.row.original.id);
+                setIsDeleteModalOpen(true);
+              }}
             />
             <Icon
               icon="clarity:edit-line"
-              onClick={() => setSelectedCarId(c.row.original.id)}
+              onClick={() => {
+                setSelectedCarId(c.row.original.id);
+                setIsEditModalOpen(true);
+              }}
             />
           </IconContainer>
         ),

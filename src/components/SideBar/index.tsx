@@ -5,12 +5,12 @@ import { Container } from './style';
 
 interface SideBarProps {
   isShown: boolean;
+  location: string;
 }
 
-const SideBar = ({ isShown }: SideBarProps) => {
-  console.log(isShown);
+const SideBar = ({ isShown, location }: SideBarProps) => {
   return (
-    <Container isShown={isShown}>
+    <Container location={location} isShown={isShown}>
       <h1>
         <Icon height={48.75} width={48.75} icon="carbon:logo-delicious" />
       </h1>
@@ -25,7 +25,7 @@ const SideBar = ({ isShown }: SideBarProps) => {
           <Link to="/">Sobre</Link>
         </li>
         <li>
-          <Link to="/">Tabela</Link>
+          <Link to="/table">Tabela</Link>
         </li>
       </ul>
     </Container>

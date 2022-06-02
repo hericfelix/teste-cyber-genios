@@ -15,7 +15,8 @@ export const PaginateProvider = ({ children }: ProviderProps) => {
   const [canLoadMoreCars, setCanLoadMoreCars] = useState<boolean>(true);
 
   useEffect(() => {
-    const slicedCars = cars.slice(0, 5);
+    const length = paginatedCars.length > 10 ? paginatedCars.length : 10;
+    const slicedCars = cars.slice(0, length);
 
     setPaginatedCars(slicedCars);
 

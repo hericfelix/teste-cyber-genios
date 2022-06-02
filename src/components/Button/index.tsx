@@ -1,4 +1,4 @@
-import React, { ReactNode } from 'react';
+import React, { ButtonHTMLAttributes, ReactNode } from 'react';
 import {
   WhiteOrBlack,
   TransparentOrBlack,
@@ -9,7 +9,7 @@ import {
 } from '../../ts/types';
 import { Container } from './style';
 
-interface ButtonProps {
+interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   children: ReactNode;
   color: WhiteOrBlack;
   background: TransparentOrBlack;
@@ -27,6 +27,7 @@ const Button = ({
   border,
   padding,
   fontSize,
+  ...rest
 }: ButtonProps) => {
   return (
     <Container
@@ -36,6 +37,7 @@ const Button = ({
       fontSize={fontSize}
       color={color}
       variant={variant}
+      {...rest}
     >
       {children}
     </Container>

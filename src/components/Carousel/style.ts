@@ -7,8 +7,11 @@ interface DisabledProps {
 export const Container = styled.div`
   display: flex;
   align-items: center;
-  padding: 3rem;
+  padding: 1.5rem;
   gap: 4rem;
+  @media (min-width: 768px) {
+    padding: 3rem;
+  }
 `;
 
 export const Content = styled.div`

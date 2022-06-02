@@ -10,9 +10,7 @@ import {
   LowerMobileContent,
 } from './style';
 
-type Props = {};
-
-const Home = (props: Props) => {
+const Home = () => {
   const { cars } = useCars();
   return (
     <Container>

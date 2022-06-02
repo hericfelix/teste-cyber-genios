@@ -22,6 +22,7 @@ export const InnerInput = styled.input`
   border-radius: 0.375rem;
   width: 100%;
   transition-duration: 0.2s;
+  background-color: transparent;
 
   ::placeholder {
     color: ${({ theme }) => theme.colors.primary};

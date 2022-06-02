@@ -88,15 +88,15 @@ export const LowerDesktopContent = styled.section`
     }
   }
   @media (min-width: 1024px) {
-    padding: 5.6% 11.4% 0 0;
-    width: 57%;
+    padding: 5% 7% 0 0;
+    width: 65%;
     gap: 1rem;
     height: 100%;
     backdrop-filter: blur(3px);
     h2 {
       font-size: ${({ theme }) => theme.typography.desktop.h1.size};
       font-weight: ${({ theme }) => theme.typography.desktop.h1.weight};
-      line-height: 200%;
+      line-height: 150%;
     }
     p {
       text-align: right;
@@ -104,6 +104,13 @@ export const LowerDesktopContent = styled.section`
       font-weight: ${({ theme }) => theme.typography.desktop.p.mdWeight};
       line-height: 150%;
       margin-bottom: 1rem;
+    }
+  }
+  @media (min-width: 1366px) {
+    padding: 5.6% 11.4% 0 0;
+    width: 57%;
+    h2 {
+      line-height: 200%;
     }
   }
 `;

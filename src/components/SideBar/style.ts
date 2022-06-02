@@ -2,10 +2,11 @@ import styled from 'styled-components';
 
 interface ContainerProps {
   isShown: boolean;
+  location: string;
 }
 
 export const Container = styled.nav<ContainerProps>`
-  position: absolute;
+  position: fixed;
   z-index: 2;
   left: ${({ isShown }) => {
     return isShown ? 0 : '-100%';
@@ -32,7 +33,7 @@ export const Container = styled.nav<ContainerProps>`
     list-style: none;
     align-items: flex-start;
     padding: 0;
-    > :nth-child(1) {
+    > :nth-child(${({ location }) => (location === '/' ? 1 : 4)}) {
       border-bottom: ${({ theme }) => `2px solid ${theme.colors.primary}`};
     }
 
