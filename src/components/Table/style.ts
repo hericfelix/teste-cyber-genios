@@ -86,7 +86,7 @@ export const TR = styled.tr`
 
 export const TH = styled.th`
   font-weight: ${({ theme }) => theme.typography.desktop.p.smWeight};
-  font-size: ${({ theme }) => theme.typography.desktop.p.size};
+  font-size: ${({ theme }) => theme.typography.desktop.p.smSize};
   line-height: 140%;
   color: ${({ theme }) => theme.colors.white};
 `;
@@ -94,7 +94,7 @@ export const TH = styled.th`
 export const TD = styled.td`
   text-align: center;
   font-weight: 400;
-  font-size: ${({ theme }) => theme.typography.desktop.p.size};
+  font-size: ${({ theme }) => theme.typography.desktop.p.smSize};
   justify-content: center;
   color: ${({ theme }) => theme.colors.primary};
   display: flex;

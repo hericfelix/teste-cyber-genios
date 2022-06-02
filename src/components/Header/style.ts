@@ -19,6 +19,8 @@ export const Content = styled.ul`
     justify-content: space-between;
     align-items: center;
     list-style: none;
+    max-width: 1380px;
+    margin: 0 auto;
 
     li:last-child {
       align-items: center;

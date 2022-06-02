@@ -1,7 +1,11 @@
 export type RoundedOrSquare = 'rounded' | 'square';
 
-export type DefaultOrBlack = 'default' | 'black';
+export type WhiteOrBlack = 'white' | 'black';
 
-export type SmallorMedium = 'small' | 'medium';
+export type SmallOrMedium = 'small' | 'medium';
 
-export type WhiteorBlackorNone = 'white' | 'black' | 'none';
+export type SmallOrMediumOrLarge = 'small' | 'medium' | 'large';
+
+export type WhiteOrBlackOrNone = 'white' | 'black' | 'none';
+
+export type TransparentOrBlack = 'transparent' | 'black';

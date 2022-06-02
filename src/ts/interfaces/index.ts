@@ -1,16 +1,35 @@
 import { ReactNode } from 'react';
-import { FieldValues } from 'react-hook-form';
 
-export interface IComponentsTypography {
+export interface IComponentsDesktopTypography {
   button: {
     mdSize: string;
     smSize: string;
     weight: number;
   };
   p: {
-    size?: string;
-    mdSize?: string;
-    smSize?: string;
+    mdSize: string;
+    smSize: string;
+    mdWeight: number;
+    smWeight: number;
+  };
+  h1: {
+    weight: number;
+    size: string;
+  };
+  h2: {
+    weight: number;
+    size: string;
+  };
+}
+
+export interface IComponentsMobileTypography {
+  button: {
+    mdSize: string;
+    smSize: string;
+    weight: number;
+  };
+  p: {
+    size: string;
     mdWeight: number;
     smWeight: number;
   };
@@ -30,6 +49,7 @@ export interface IComponents {
     rdBorder: string;
     smPadding: string;
     mdPadding: string;
+    lgPadding: string;
   };
   input: {
     border: string;

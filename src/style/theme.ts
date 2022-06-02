@@ -13,6 +13,7 @@ export const theme: DefaultTheme = {
       rdBorder: '21px',
       smPadding: '0.25rem 3.5rem',
       mdPadding: '0.5rem 4.5rem',
+      lgPadding: '0.5rem 6rem',
     },
     input: {
       border: '0.375rem',

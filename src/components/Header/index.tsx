@@ -22,12 +22,13 @@ const Header = (props: Props) => {
         />
         <Content>
           <li>
-            <Icon
-              color={'#fff'}
-              height={48.75}
-              width={48.75}
-              icon="carbon:logo-delicious"
-            />
+            <h1>
+              <Icon
+                color={'#fff'}
+                fontSize={48.75}
+                icon="carbon:logo-delicious"
+              />
+            </h1>
           </li>
           <li>
             <Link to="/">Home</Link>
