@@ -34,8 +34,9 @@ const CarCard = ({ car }: CarCardProps) => {
       <Button
         border="black"
         padding="medium"
-        size="small"
-        color="default"
+        fontSize="small"
+        color="black"
+        background="transparent"
         variant="rounded"
       >
         Ver carro

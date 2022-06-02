@@ -1,4 +1,9 @@
-import { IColors, IComponents, IComponentsTypography } from '../ts/interfaces';
+import {
+  IColors,
+  IComponents,
+  IComponentsDesktopTypography,
+  IComponentsMobileTypography,
+} from '../ts/interfaces';
 
 declare module 'styled-components' {
   export interface DefaultTheme {
@@ -6,8 +11,8 @@ declare module 'styled-components' {
     components: IComponents;
     typography: {
       fontFamily: string;
-      desktop: IComponentsTypography;
-      mobile: IComponentsTypography;
+      desktop: IComponentsDesktopTypography;
+      mobile: IComponentsMobileTypography;
     };
   }
 }

@@ -1,34 +1,39 @@
 import React, { ReactNode } from 'react';
 import {
-  DefaultOrBlack,
+  WhiteOrBlack,
+  TransparentOrBlack,
   RoundedOrSquare,
-  SmallorMedium,
-  WhiteorBlackorNone,
+  SmallOrMedium,
+  WhiteOrBlackOrNone,
+  SmallOrMediumOrLarge,
 } from '../../ts/types';
 import { Container } from './style';
 
 interface ButtonProps {
   children: ReactNode;
-  color: DefaultOrBlack;
+  color: WhiteOrBlack;
+  background: TransparentOrBlack;
   variant: RoundedOrSquare;
-  size: SmallorMedium;
-  border: WhiteorBlackorNone;
-  padding: SmallorMedium;
+  fontSize: SmallOrMedium;
+  border: WhiteOrBlackOrNone;
+  padding: SmallOrMediumOrLarge;
 }
 
 const Button = ({
   children,
-  color = 'default',
-  variant = 'rounded',
-  border = 'black',
-  padding = 'medium',
-  size = 'small',
+  color,
+  background,
+  variant,
+  border,
+  padding,
+  fontSize,
 }: ButtonProps) => {
   return (
     <Container
+      background={background}
       border={border}
       padding={padding}
-      size={size}
+      fontSize={fontSize}
       color={color}
       variant={variant}
     >

@@ -6,6 +6,7 @@ interface ContainerProps {
 
 export const Container = styled.nav<ContainerProps>`
   position: absolute;
+  z-index: 2;
   left: ${({ isShown }) => {
     return isShown ? 0 : '-100%';
   }};
