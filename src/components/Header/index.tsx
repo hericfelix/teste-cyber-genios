@@ -1,6 +1,6 @@
 import { Icon } from '@iconify/react';
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import useComponentVisible from '../../hooks';
 import SideBar from '../SideBar';
 import { Container, Content } from './style';
@@ -11,9 +11,16 @@ const Header = (props: Props) => {
   const { ref, isComponentVisible, setIsComponentVisible } =
     useComponentVisible(false);
 
+  const location = useLocation();
+  console.log(location.pathname);
+
+  useEffect(() => {
+    setIsComponentVisible(false);
+  }, [location.pathname]);
+
   return (
     <div ref={ref}>
-      <Container>
+      <Container location={location.pathname}>
         <Icon
           color={'#fff'}
           fontSize={32}
@@ -40,7 +47,7 @@ const Header = (props: Props) => {
             <Link to="/">Sobre</Link>
           </li>
           <li>
-            <Link to="/">Tabela</Link>
+            <Link to="/table">Tabela</Link>
           </li>
           <li>
             <Link to="/">Entrar</Link>
@@ -52,7 +59,7 @@ const Header = (props: Props) => {
           </li>
         </Content>
       </Container>
-      <SideBar isShown={isComponentVisible} />
+      <SideBar location={location.pathname} isShown={isComponentVisible} />
     </div>
   );
 };

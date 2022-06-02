@@ -2,7 +2,6 @@ import styled from 'styled-components';
 import ReactLoading from 'react-loading';
 
 export const Container = styled.div`
-  padding-top: 800px;
   margin: 0 auto;
   width: 100%;
   box-sizing: border-box;
@@ -11,7 +10,7 @@ export const Container = styled.div`
   justify-content: center;
   align-items: center;
   gap: 1.875rem;
-  background: #fffdfa;
+
   > div:first-child {
     box-sizing: border-box;
     width: 100%;
@@ -33,7 +32,7 @@ export const Container = styled.div`
       display: none;
     }
 
-    @media (min-width: 768px) {
+    @media (min-width: 1024px) {
       max-width: 100%;
     }
   }
@@ -50,7 +49,7 @@ export const StyledTable = styled.table`
 export const THead = styled.thead`
   display: none;
 
-  @media (min-width: 768px) {
+  @media (min-width: 1024px) {
     display: block;
     background-color: ${({ theme }) => theme.colors.primary};
     border-radius: 0.375rem;
@@ -75,7 +74,7 @@ export const TR = styled.tr`
   gap: 0.5rem;
   padding: 0.5rem;
 
-  @media (min-width: 768px) {
+  @media (min-width: 1024px) {
     flex-direction: row;
     border-radius: 0;
     border: none;
@@ -100,8 +99,9 @@ export const TD = styled.td`
   display: flex;
   align-items: center;
 
-  @media (min-width: 768px) {
+  @media (min-width: 1024px) {
     justify-content: flex-start;
+    height: 3rem;
   }
 `;
 

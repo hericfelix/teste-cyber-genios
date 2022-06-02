@@ -82,10 +82,21 @@ export interface CarsContextData {
   setCars: React.Dispatch<React.SetStateAction<ICar[]>>;
   selectedCarId: number;
   setSelectedCarId: React.Dispatch<React.SetStateAction<number>>;
+  idNum: number;
+  setIdNum: React.Dispatch<React.SetStateAction<number>>;
 }
 
 export interface PaginateContextData {
   paginatedCars: ICar[];
   handleLoadMoreCars: () => Promise<void>;
   canLoadMoreCars: boolean;
+}
+
+export interface ModalContextData {
+  isEditModalOpen: boolean;
+  setIsEditModalOpen: React.Dispatch<React.SetStateAction<boolean>>;
+  isAddNewModalOpen: boolean;
+  setIsAddNewModalOpen: React.Dispatch<React.SetStateAction<boolean>>;
+  isDeleteModalOpen: boolean;
+  setIsDeleteModalOpen: React.Dispatch<React.SetStateAction<boolean>>;
 }

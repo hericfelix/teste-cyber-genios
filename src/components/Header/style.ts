@@ -1,8 +1,14 @@
 import styled from 'styled-components';
 
-export const Container = styled.header`
+interface LocationProps {
+  location: string;
+}
+
+export const Container = styled.header<LocationProps>`
   padding: 1.5rem 1.75rem;
   position: absolute;
+  background-color: ${({ theme, location }) =>
+    location === '/table' ? theme.colors.primary : 'transparent'};
   width: 100%;
   @media (min-width: 768px) {
     > :first-child {

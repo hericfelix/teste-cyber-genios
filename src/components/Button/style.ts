@@ -44,7 +44,8 @@ export const Container = styled.button<ContainerProps>`
     }
   }};
   display: flex;
-  gap: '0.5rem';
+  align-items: center;
+  gap: 0.5rem;
   border: ${({ border, theme }) => {
     switch (border) {
       case 'black':
