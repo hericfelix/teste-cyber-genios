@@ -36,7 +36,6 @@ const TablePage = () => {
   };
 
   const addCarSubmit = (data: FieldValues) => {
-    console.log(data);
     const { link, ...rest } = data;
     rest.id = idNum;
     rest.img = URL.createObjectURL(data.img[0]);

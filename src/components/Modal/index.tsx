@@ -12,6 +12,7 @@ const Modal = ({ children, isOpen, setIsOpen }: ModalProps) => {
     <>
       {isOpen && (
         <Container
+          data-testid="modal"
           onClick={(evt) => {
             setIsOpen(false);
           }}
