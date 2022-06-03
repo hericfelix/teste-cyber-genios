@@ -11,8 +11,6 @@ const Carousel = ({ children }: CarouselProps) => {
   const [canScrollLeft, setCanScrollLeft] = useState<boolean>(false);
   const [canScrollRight, setCanScrollRight] = useState<boolean>(true);
 
-  console.log(containerRef);
-
   const handleRightScroll = () => {
     if (containerRef.current) {
       containerRef.current.scrollLeft += 820;

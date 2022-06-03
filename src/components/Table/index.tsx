@@ -78,7 +78,7 @@ export const Table = () => {
   );
 
   const data = useMemo(() => paginatedCars, [paginatedCars]);
-  console.log(paginatedCars);
+
   const { getTableProps, getTableBodyProps, headerGroups, prepareRow, rows } =
     useTable<ICar>(
       {
