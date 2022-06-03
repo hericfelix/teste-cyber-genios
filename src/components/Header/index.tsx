@@ -12,7 +12,6 @@ const Header = (props: Props) => {
     useComponentVisible(false);
 
   const location = useLocation();
-  console.log(location.pathname);
 
   useEffect(() => {
     setIsComponentVisible(false);

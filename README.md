@@ -1,46 +1,52 @@
-# Getting Started with Create React App
+<h1 align="center">
+  Teste Cyber Genios
+</h1>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Esta aplicação foi criada para o desafio da Cyber Genios, e o objetivo dela é criar um app de carros, onde é possível fazer a visualização de todos os carros na pagina inicial, e adicionar e editar carros na página da tabela. Como uma API não está sendo utilizada, a adição e edição é resetada toda vez que a pagina é atualizada.
 
-## Available Scripts
+## **Tecnologias**
 
-In the project directory, you can run:
+- <a href="https://pt-br.reactjs.org/" target="_blank">ReactJS</a>
+- <a href="https://www.typescriptlang.org/" target="_blank">Typescript</a>
+- <a href="https://styled-components.com/" target="_blank">Styled-components</a>
+- <a href="https://www.docker.com/" target="_blank">Docker</a>
+- <a href="https://react-table-v7.tanstack.com/" target="_blank">React Table V7</a>
+- <a href="https://iconify.design/" target="_blank">Iconify</a>
 
-### `yarn start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## **Instruções**
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+A aplicação pode ser iniciada localmente com o docker ou diretamente pelo terminal.
 
-### `yarn test`
+### Terminal
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Para iniciar pelo terminal, basta clonar o repositório, ir para a pasta raiz do projeto e utilizar o comando `yarn start` ou `npm run start`.
 
-### `yarn build`
+### Docker
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Para iniciar pelo docker, siga os seguintes passos:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1.  Vá para a pasta raiz do projeto e crie a imagem. A flag `-t` é para definir o nome da imagem a ser criada.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+        docker build -t teste_cyber_genios .
 
-### `yarn eject`
+2.  Rode a imagem. A flag `-p` é para definir qual port irá se conectar à port da imagem, sendo `3333` o port do host, e `3000` o port da image.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+        docker run -p 3333:3000 teste_cyber_genios
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+3.  A partir de agora a imagem estará acessivel na porta `3333` do localhost.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+        http://localhost:3333/
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+---
 
-## Learn More
+## **Páginas**
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+`/`
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Página onde é possível ver a listagem dos carros cadastrados.
+
+`/table`
+
+Página onde é possível ver a table dos carros cadastrados, e onde pode ser realizada a adição e edição dos carros.
