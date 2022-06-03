@@ -93,6 +93,9 @@ const Form = ({ setIsOpen, car, onSubmit }: FormProps) => {
             placeholder=""
             register={register}
             name="launchYear"
+            type="number"
+            max={2022}
+            min={0}
           />
           <Input
             required
@@ -101,6 +104,7 @@ const Form = ({ setIsOpen, car, onSubmit }: FormProps) => {
             placeholder=""
             register={register}
             name="maxSpeed"
+            type="number"
           />
           <Input
             required
@@ -109,6 +113,9 @@ const Form = ({ setIsOpen, car, onSubmit }: FormProps) => {
             placeholder=""
             register={register}
             name="economyRating"
+            type="number"
+            max={10}
+            min={0}
           />
           <Input
             required
@@ -117,6 +124,9 @@ const Form = ({ setIsOpen, car, onSubmit }: FormProps) => {
             placeholder=""
             register={register}
             name="userRating"
+            type="number"
+            max={10}
+            min={0}
           />
           <Input
             required
